@@ -14,18 +14,22 @@ AMAnimatedNumber *animateNumber = [[AMAnimatedNumber alloc] initWithFrame:CGRect
 ```
 
 - Set number
+
 ```objc
-[animateNumber setTextFont:[UIFont boldSystemFontOfSize:26]];
+[animateNumber setTextFont:[UIFont boldSystemFontOfSize:28]];
 [animateNumber setTextColor:[UIColor brownColor]];
 
-[animateNumber setNumbers:_textField.text
-                  animated:_swtich.on
-                 direction:_segmentedControl.selectedSegmentIndex == 0 ? AMAnimateNumberDirectionUp:AMAnimateNumberDirectionDown];
+[animateNumber setNumbers:@"$ 89,572,234.32"
+                  animated:YES];
 
 
 ```
 
 ## License
+
+MIT License
+
+	Copyright (c) 2015 Mellong Lau
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
