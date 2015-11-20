@@ -3,7 +3,7 @@ AMAnimatedNumber
 
 <p align="left">
 
-    <a href="https://travis-ci.org/MellongLau/AMAnimatedNumber"><img src="https://travis-ci.org/MellongLau/AMAnimatedNumber.svg" alt="Build Status" /></a>
+    <!-- <a href="https://travis-ci.org/MellongLau/AMAnimatedNumber"><img src="https://travis-ci.org/MellongLau/AMAnimatedNumber.svg" alt="Build Status" /></a> -->
     <img src="https://img.shields.io/badge/platform-iOS%207%2B-blue.svg?style=flat" alt="Platform: iOS 7+"/>
     <img src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" alt="License: MIT" />
     
