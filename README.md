@@ -4,6 +4,8 @@ AMAnimatedNumber is simple number animation component.
 
 ## Preview
 
+![screenshot.gif](https://raw.github.com/MellongLau/AMAnimatedNumber/master/Screenshots/screenshot.gif)
+
 ## Usage
 
 - Init:
