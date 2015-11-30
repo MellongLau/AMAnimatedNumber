@@ -90,7 +90,6 @@
             NSString *text = [_allNumbersList componentsJoinedByString:@"\n"];
             UILabel *label = [self createLabels:text];
             
-            [label sizeThatFits:CGSizeMake(200.f, 2000)];
             CGRect frame = label.frame;
             frame.origin.x = labelsList.count > 0 ? CGRectGetMaxX(labelsList.lastObject.frame) : 0;
             frame.origin.y = stringItem.integerValue * label.bounds.size.height/_allNumbersList.count;
@@ -123,7 +122,7 @@
                 frame.origin.y = -label.bounds.size.height;
                 label.frame = frame;
             }
-            [UIView animateWithDuration:0.6 delay:0.1+0.01*i options:UIViewAnimationOptionCurveEaseOut animations:^{
+            [UIView animateWithDuration:0.6 delay:0.1+0.02*i options:UIViewAnimationOptionCurveEaseOut animations:^{
                 
                 CGRect frame = label.frame;
                 if (isNumber) {
