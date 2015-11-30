@@ -15,6 +15,21 @@ AMAnimatedNumber is simple number animation component.
 
 ![screenshot.gif](https://raw.github.com/MellongLau/AMAnimatedNumber/master/Screenshots/screenshot.gif)
 
+##Installation
+
+### CocoaPods
+
+[CocoaPods](http://www.cocoapods.org) is the recommended way to add AMAnimatedNumber to your project.
+
+1. Add additional entry to your Podfile.
+
+  ```ruby
+  pod "AMAnimatedNumber", "~> 0.0.1"
+  ```
+
+2. Install  Pod(s) running `pod install` command.
+3. Include AMAnimatedNumber using `#import <AMAnimatedNumber.h>`.
+
 ## Usage
 
 - Init:
