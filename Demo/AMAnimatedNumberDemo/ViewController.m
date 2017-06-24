@@ -47,14 +47,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onAlignSwitchChanged:(UISegmentedControl *)sender {
+    [self.view endEditing:YES];
+    [_animateNumber setAlignment:sender.selectedSegmentIndex];
+}
+
 - (IBAction)onSetNumberButtonClicked:(UIButton *)sender {
     [self.view endEditing:YES];
+    
     [_animateNumber setTextFont:[UIFont boldSystemFontOfSize:26]];
     [_animateNumber setTextColor:[UIColor brownColor]];
     
     [_animateNumber setNumbers:_textField.text
                       animated:_swtich.on
                      direction:_segmentedControl.selectedSegmentIndex == 0 ? AMAnimateNumberDirectionUp:AMAnimateNumberDirectionDown];
+    _animateNumber.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    _animateNumber.layer.borderWidth = 1.0;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

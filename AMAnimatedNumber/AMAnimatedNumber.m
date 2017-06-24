@@ -32,6 +32,7 @@
     NSArray <UILabel *> *_labelsList;
     UIView *_maskView;
     NSString *_numbers;
+    AMAnimateNumberAlign _alignment;
 }
 
 
@@ -84,12 +85,13 @@
 - (NSArray *)generateLabels
 {
     NSMutableArray<UILabel *> *labelsList = [NSMutableArray array];
+    
     for (int i = 0; i < _numbers.length; i++) {
         NSString *stringItem = [_numbers substringWithRange:NSMakeRange(i, 1)];
         if ([self isNumberType:stringItem]) {
             NSString *text = [_allNumbersList componentsJoinedByString:@"\n"];
             UILabel *label = [self createLabels:text];
-            
+           
             CGRect frame = label.frame;
             frame.origin.x = labelsList.count > 0 ? CGRectGetMaxX(labelsList.lastObject.frame) : 0;
             frame.origin.y = stringItem.integerValue * label.bounds.size.height/_allNumbersList.count;
@@ -105,7 +107,30 @@
             [labelsList addObject:label];
         }
     }
+    
+    
+    if (_alignment == AMAnimateNumberAlignLeft) {
+        return labelsList;
+    }
+    
+    CGFloat labelsWidth = CGRectGetMaxX(labelsList.lastObject.frame);
+    
+    for (UILabel *label in labelsList) {
+        CGRect frame =  label.frame;
+        if (_alignment == AMAnimateNumberAlignCenter) {
+            frame.origin.x += (self.bounds.size.width-labelsWidth)/2.0;
+        }else if (_alignment == AMAnimateNumberAlignRight) {
+            frame.origin.x += self.bounds.size.width-labelsWidth;
+        }
+        label.frame = frame;
+    }
+    
     return labelsList;
+}
+
+- (void)setAlignment:(AMAnimateNumberAlign)alignment
+{
+    _alignment = alignment;
 }
 
 - (void)updateLabelsLayoutWithAnimated:(BOOL)animated

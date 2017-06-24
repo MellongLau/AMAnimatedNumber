@@ -31,6 +31,13 @@ typedef NS_ENUM(NSInteger, AMAnimateNumberDirection)
     AMAnimateNumberDirectionDown
 };
 
+typedef NS_ENUM(NSInteger, AMAnimateNumberAlign)
+{
+    AMAnimateNumberAlignLeft = 0,
+    AMAnimateNumberAlignCenter,
+    AMAnimateNumberAlignRight
+};
+
 @interface AMAnimatedNumber : UIView
 
 @property (nonatomic, strong) UIColor *textColor; // Label text color, default text color is black color.
@@ -54,6 +61,6 @@ typedef NS_ENUM(NSInteger, AMAnimateNumberDirection)
  */
 - (void)setNumbers:(NSString *)numbers animated:(BOOL)animated direction:(AMAnimateNumberDirection)direction;
 
-
+- (void)setAlignment:(AMAnimateNumberAlign)alignment;
 
 @end
