@@ -44,6 +44,7 @@ AMAnimatedNumber *animateNumber = [[AMAnimatedNumber alloc] initWithFrame:CGRect
 ```objc
 [animateNumber setTextFont:[UIFont boldSystemFontOfSize:28]];
 [animateNumber setTextColor:[UIColor brownColor]];
+[animateNumber setAlignment:AMAnimateNumberAlignCenter];
 
 [animateNumber setNumbers:@"$ 89,572,234.32"
                   animated:YES];
