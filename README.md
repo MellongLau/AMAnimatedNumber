@@ -55,7 +55,7 @@ AMAnimatedNumber *animateNumber = [[AMAnimatedNumber alloc] initWithFrame:CGRect
 ## More
 Learn more? Follow my `WeChat` public account `mellong`:
 
-![WeChat QRcode](http://www.devlong.com/blogImages/qrcode_for_mellong.jpg)
+![WeChat QRcode](http://blog.devlong.com/blogImages/qrcode_for_mellong.jpg)
 
 ## License
 
