@@ -24,7 +24,7 @@ AMAnimatedNumber is simple number animation component.
 1. Add additional entry to your Podfile.
 
   ```ruby
-  pod "AMAnimatedNumber", "~> 0.0.1"
+  pod "AMAnimatedNumber", "~> 0.0.2"
   ```
 
 2. Install  Pod(s) running `pod install` command.
