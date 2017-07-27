@@ -77,6 +77,13 @@
         _labelsList = [self generateLabels];
         CGRect frame = _maskView.frame;
         frame.size.height = _labelsList.firstObject.frame.size.height;
+        NSString *stringItem = [_numbers substringWithRange:NSMakeRange(0, 1)];
+        if ([self isNumberType:stringItem]) {
+            frame.size.height = _labelsList.firstObject.frame.size.height / 10.0;
+        }else {
+            frame.size.height = _labelsList.firstObject.frame.size.height;
+
+        }
         _maskView.frame = frame;
         
     }
