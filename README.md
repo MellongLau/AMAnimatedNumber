@@ -11,7 +11,7 @@ AMAnimatedNumber
 
 AMAnimatedNumber is simple number animation component.
 
-Welcom to join in QQ group 5522740 for further discussion.  
+Welcome to join in QQ group 5522740 for further discussion.  
 欢迎加入QQ群 5522740 交流iOS开发.
 
 ## Preview
