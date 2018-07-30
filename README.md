@@ -1,7 +1,3 @@
-Donate
-===========
-
-* [Donate via paypal](https://paypal.me/mellonglau)
 
 AMAnimatedNumber
 ==================
