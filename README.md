@@ -5,7 +5,7 @@ AMAnimatedNumber
 <p align="left">
 
 <!-- <a href="https://travis-ci.org/MellongLau/AMAnimatedNumber"><img src="https://travis-ci.org/MellongLau/AMAnimatedNumber.svg" alt="Build Status" /></a> -->
-<img src="https://img.shields.io/badge/platform-iOS%207%2B-blue.svg?style=flat" alt="Platform: iOS 7+"/>
+<img src="https://img.shields.io/badge/platform-iOS%207%2B-blue.svg?style=flat" alt="Platform: iOS 12+"/>
 <img src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" alt="License: MIT" />
     
 </p>
@@ -26,7 +26,7 @@ AMAnimatedNumber is simple number animation component.
 1. Add additional entry to your Podfile.
 
   ```ruby
-  pod "AMAnimatedNumber", "~> 0.0.3"
+  pod "AMAnimatedNumber", "~> 0.0.4"
   ```
 
 2. Install  Pod(s) running `pod install` command.
