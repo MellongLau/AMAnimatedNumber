@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -49,34 +46,33 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myv-wR-V7E">
                                 <rect key="frame" x="36" y="162" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alX-I6-6ef">
                                 <rect key="frame" x="36" y="203" width="69" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PKp-Wt-pVp">
-                                <rect key="frame" x="163" y="200" width="121" height="29"/>
+                                <rect key="frame" x="177" y="199.5" width="107" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="Fiz-hk-Prx"/>
-                                    <constraint firstAttribute="width" constant="121" id="nKW-Wt-0ET"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Up"/>
                                     <segment title="Down"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Align" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa4-QM-aOT">
-                                <rect key="frame" x="36" y="247" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Align" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa4-QM-aOT">
+                                <rect key="frame" x="36" y="247" width="38.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zbc-iD-4es">
-                                <rect key="frame" x="117" y="243" width="167" height="29"/>
+                                <rect key="frame" x="102" y="242" width="182" height="32"/>
                                 <segments>
                                     <segment title="Left"/>
                                     <segment title="Center"/>
@@ -86,7 +82,7 @@
                                     <action selector="onAlignSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tKs-CR-XsX"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bac-Yf-Qb8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bac-Yf-Qb8">
                                 <rect key="frame" x="36" y="289" width="248" height="41"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -102,8 +98,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="PKp-Wt-pVp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="alX-I6-6ef" secondAttribute="trailing" constant="8" symbolic="YES" id="1XQ-Q7-2wI"/>
                             <constraint firstItem="bac-Yf-Qb8" firstAttribute="trailing" secondItem="PKp-Wt-pVp" secondAttribute="trailing" id="41o-z1-uFY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LVk-Pd-cq5" secondAttribute="trailing" constant="20" id="5zA-ey-oag"/>
+                            <constraint firstItem="zbc-iD-4es" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pa4-QM-aOT" secondAttribute="trailing" constant="8" symbolic="YES" id="8ax-Uk-55I"/>
                             <constraint firstItem="RpV-0j-Pts" firstAttribute="centerY" secondItem="Myv-wR-V7E" secondAttribute="centerY" id="Ax7-NK-n3i"/>
                             <constraint firstItem="LVk-Pd-cq5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="Eer-Wl-0N5"/>
                             <constraint firstItem="Myv-wR-V7E" firstAttribute="leading" secondItem="Gqz-Qb-8Wq" secondAttribute="leading" id="EjV-5u-d8s"/>
@@ -118,6 +116,7 @@
                             <constraint firstItem="pa4-QM-aOT" firstAttribute="top" secondItem="alX-I6-6ef" secondAttribute="bottom" constant="23" id="feN-dg-ye4"/>
                             <constraint firstItem="pa4-QM-aOT" firstAttribute="leading" secondItem="alX-I6-6ef" secondAttribute="leading" id="h4I-GX-xHV"/>
                             <constraint firstItem="bac-Yf-Qb8" firstAttribute="leading" secondItem="alX-I6-6ef" secondAttribute="leading" id="i1Q-i0-Td7"/>
+                            <constraint firstItem="RpV-0j-Pts" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Myv-wR-V7E" secondAttribute="trailing" constant="8" symbolic="YES" id="iHs-eh-EZO"/>
                             <constraint firstItem="Myv-wR-V7E" firstAttribute="top" secondItem="Gqz-Qb-8Wq" secondAttribute="bottom" constant="16" id="iqX-18-hqS"/>
                             <constraint firstItem="alX-I6-6ef" firstAttribute="leading" secondItem="Myv-wR-V7E" secondAttribute="leading" id="tgI-Tu-gh5"/>
                             <constraint firstItem="zbc-iD-4es" firstAttribute="trailing" secondItem="PKp-Wt-pVp" secondAttribute="trailing" id="vDh-ci-T7k"/>
@@ -137,4 +136,9 @@
             <point key="canvasLocation" x="305" y="421"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

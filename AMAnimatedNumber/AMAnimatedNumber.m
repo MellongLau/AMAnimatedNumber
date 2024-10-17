@@ -56,9 +56,8 @@
 
 - (void)setNumbers:(NSString *)numbers animated:(BOOL)animated direction:(AMAnimateNumberDirection)direction
 {
-    _numbers = numbers;
+     _numbers = numbers;
     _direction = direction;
-    
     
     [self setup];
     
@@ -78,7 +77,7 @@
         CGRect frame = _maskView.frame;
         frame.size.height = _labelsList.firstObject.frame.size.height;
         NSString *stringItem = [_numbers substringWithRange:NSMakeRange(0, 1)];
-        if ([self isNumberType:stringItem]) {
+        if ([self isNumberType:stringItem] && ![stringItem isEqualToString:@"0"]) {
             frame.size.height = _labelsList.firstObject.frame.size.height / 10.0;
         }else {
             frame.size.height = _labelsList.firstObject.frame.size.height;
@@ -95,13 +94,13 @@
     
     for (int i = 0; i < _numbers.length; i++) {
         NSString *stringItem = [_numbers substringWithRange:NSMakeRange(i, 1)];
-        if ([self isNumberType:stringItem]) {
+        if ([self isNumberType:stringItem] && ![stringItem isEqualToString:@"0"]) {
             NSString *text = [_allNumbersList componentsJoinedByString:@"\n"];
             UILabel *label = [self createLabels:text];
            
             CGRect frame = label.frame;
             frame.origin.x = labelsList.count > 0 ? CGRectGetMaxX(labelsList.lastObject.frame) : 0;
-            frame.origin.y = stringItem.integerValue * label.bounds.size.height/_allNumbersList.count;
+            frame.origin.y = stringItem.integerValue * label.bounds.size.height / _allNumbersList.count;
             label.frame = frame;
             [labelsList addObject:label];
         }else {
@@ -125,9 +124,9 @@
     for (UILabel *label in labelsList) {
         CGRect frame =  label.frame;
         if (_alignment == AMAnimateNumberAlignCenter) {
-            frame.origin.x += (self.bounds.size.width-labelsWidth)/2.0;
+            frame.origin.x += (self.bounds.size.width - labelsWidth) / 2.0;
         }else if (_alignment == AMAnimateNumberAlignRight) {
-            frame.origin.x += self.bounds.size.width-labelsWidth;
+            frame.origin.x += self.bounds.size.width - labelsWidth;
         }
         label.frame = frame;
     }
@@ -145,8 +144,8 @@
     for (int i = 0; i < _numbers.length; i++) {
         NSString *stringItem = [_numbers substringWithRange:NSMakeRange(i, 1)];
         UILabel *label = _labelsList[i];
-        BOOL isNumber = [self isNumberType:stringItem];
-       
+        // If the text is 0, don't animate like number.
+        BOOL isNumber = [self isNumberType:stringItem] && ![stringItem isEqualToString:@"0"];
         
         if (animated) {
             if (_direction == AMAnimateNumberDirectionDown) {
@@ -154,11 +153,12 @@
                 frame.origin.y = -label.bounds.size.height;
                 label.frame = frame;
             }
-            [UIView animateWithDuration:0.6 delay:0.1+0.02*i options:UIViewAnimationOptionCurveEaseOut animations:^{
+            CGFloat delay = 0.1 + 0.02 * i;
+            [UIView animateWithDuration:0.6 delay:delay options:UIViewAnimationOptionCurveEaseOut animations:^{
                 
                 CGRect frame = label.frame;
                 if (isNumber) {
-                    frame.origin.y = -stringItem.integerValue * label.bounds.size.height/_allNumbersList.count;
+                    frame.origin.y = -stringItem.integerValue * label.bounds.size.height / self->_allNumbersList.count;
                     
                 }else {
                     frame.origin.y = 0;
@@ -170,7 +170,7 @@
             }];
         }else {
             CGRect frame = label.frame;
-            frame.origin.y = -stringItem.integerValue * label.bounds.size.height/_allNumbersList.count;
+            frame.origin.y = -stringItem.integerValue * label.bounds.size.height / _allNumbersList.count;
             label.frame = frame;
         }
             

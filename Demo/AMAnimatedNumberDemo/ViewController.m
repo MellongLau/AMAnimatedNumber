@@ -63,6 +63,7 @@
                      direction:_segmentedControl.selectedSegmentIndex == 0 ? AMAnimateNumberDirectionUp:AMAnimateNumberDirectionDown];
     _animateNumber.layer.borderColor = [UIColor lightGrayColor].CGColor;
     _animateNumber.layer.borderWidth = 1.0;
+    _textField.keyboardType = UIKeyboardTypeNumberPad;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
